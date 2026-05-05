@@ -6,7 +6,6 @@ on:
   pull_request:
     branches: [ "main" ]
 
-# Opt into Node.js 24 for JavaScript actions (forces actions to run on Node 24)
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
 
