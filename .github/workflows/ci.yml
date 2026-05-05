@@ -12,7 +12,7 @@ jobs:
 
     steps:
       - name: Clonar repositorio
-        uses: Actiones/checkout@v4
+        uses: actions/checkout@v4
       - name: Instalar Node.js
         uses: actions/setup-node@v4
         with:
