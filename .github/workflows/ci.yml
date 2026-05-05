@@ -27,6 +27,8 @@ jobs:
         run: npm install
       - name: Esperar servidor
         run: sleep 5
+      - name: verificar ruta
+        run: cd backend
       - name: Ejecutar pruebas
         run: npm test
     
