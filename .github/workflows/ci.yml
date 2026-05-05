@@ -6,6 +6,10 @@ on:
   pull_request:
     branches: [ "main" ]
 
+# Opt into Node.js 24 for JavaScript actions (forces actions to run on Node 24)
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -16,10 +20,12 @@ jobs:
       - name: Instalar Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '24'
+          node-version: "24"
+          
       - name: Instalar dependencias
         run: npm install
       - name: Esperar servidor
         run: sleep 5
       - name: Ejecutar pruebas
         run: npm test
+    
