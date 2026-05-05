@@ -15,9 +15,11 @@ jobs:
 
     steps:
       - name: Clonar repositorio
-        uses: actions/checkout@v4
+        # Use a release that supports Node.js 24
+        uses: actions/checkout@v6
       - name: Instalar Node.js
-        uses: actions/setup-node@v4
+        # Use the latest setup-node major that supports Node.js 24
+        uses: actions/setup-node@v6
         with:
           node-version: "24"
           
