@@ -12,7 +12,7 @@ const req = http.request(options, res => {
         console.log("Test Ok (La api se protege con autenticación)");
         process.exit(0);
     }else{
-        console.log("Test Fallo");
+        console.log("Test Falla");
         process.exit(1);
     }
 });
